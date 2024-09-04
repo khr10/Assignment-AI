@@ -1,0 +1,16 @@
+const BASE_URL = "https://api.github.com/users";
+
+export const getUserInfo = async (username) => {
+  const response = await fetch(`${BASE_URL}/${username}`);
+  return response.json();
+};
+
+export const getUserRepositories = async (username) => {
+  const response = await fetch(`${BASE_URL}/${username}/repos`);
+  return response.json();
+};
+
+export const getUserFollowers = async (username) => {
+  const response = await fetch(`${BASE_URL}/${username}/followers`);
+  return response.json();
+};
